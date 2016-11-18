@@ -251,6 +251,23 @@ hr {
   opacity: 1;
 }
 
+@media (max-device-width: 800px) {
+  .work .more {
+    opacity: 1;
+    top: 190px;
+    font-size: 1rem;
+  }
+  .work-container {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-device-width: 375px) {
+  .work .more {
+    top: 155px;
+  }
+}
+
 .work img:nth-child(even) {
     margin-bottom: 20px;
   }
@@ -297,7 +314,7 @@ hr {
 }
 
 .work-example img {
-  width: 33%;
+  width: 50%;
   display: block;
   margin: 0 auto;
   margin-top: 10px;
