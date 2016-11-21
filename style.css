@@ -264,7 +264,10 @@ hr {
 
 @media (max-device-width: 375px) {
   .work .more {
-    top: 155px;
+    top: 190px;
+  }
+  .work p {
+    padding-bottom: 40px;
   }
 }
 
@@ -273,7 +276,7 @@ hr {
   }
 
 .featherlight-content {
-  max-width: 55%;
+  max-width: 65%;
 }
 
 @media (max-device-width: 800px) {
@@ -372,7 +375,16 @@ hr {
 .skill img {
   width: 20%;
   padding-bottom: 20px;
-  opacity: .7;
+  opacity: .01;
+  position: relative;
+  bottom: -100px;
+}
+
+@media (max-device-width: 800px) {
+  .skill img {
+    opacity: .7;
+    bottom: 0;
+  }
 }
 
 .contact-links {
