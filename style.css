@@ -484,14 +484,13 @@ hr {
 }
 
 .work-tile.active .work-text{
-  /*animation: fade-in .8s;*/
   opacity: 1;
 }
 
 .active .work-content {
   height: auto;
   animation: expand .5s;
-  padding: 0 40px;
+  padding: 0 40px 40px;
 }
 
 .work-tile.close {
@@ -499,6 +498,11 @@ hr {
   opacity: 0;
   visibility: hidden;
   height: 0;
+}
+
+.work-tile.active .work-retailers img {
+  width: 80%;
+  margin-top: 40px;
 }
 
 @keyframes expand {
