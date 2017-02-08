@@ -57,7 +57,7 @@
    <hr>
     <div class="row work-container">
       <h2>Recent Projects</h2>
-      <div href="#" class="work col-4" data-featherlight="#ww-it">
+      <!--<div href="#" class="work col-4" data-featherlight="#ww-it">
           <img src="img/wwit-work2.png">
           <p class="more">View More</p>
           <h3>WannaWatch.it</h3>
@@ -77,16 +77,77 @@
         <h3>Secondstage.com</h3>
         <hr> 
         <p>Corporate event planning business from Vancouver BC </p>              
+      </div>-->
+
+      <div class="work-tile col-4">
+          <img src="img/wannawatch.png">
+          <!--<p class="more">View More</p>-->
+          <hr>
+          <p>Vancouver - New York based start up for movie sharing and ticket purchasing</p>
+        <div class="work-content">
+          <h2>WannaWatch.it</h2>
+          <h3>Initial Concepting, UX and Front End Design for a Vancouver based start-up</h3>
+          <hr>
+          <div class="work-text">
+            <img src="img/wwit-work.png">
+            <p>As part of a small start up team I helped to create initial UX designs, wireframes and mockups for a social movie sharing platform sponsored by the Canadian Media Fund.  I also helped with user testing and google analytics/adwords campaigns.<br><a href="http://www.wannawatch.it" target="_blank" class="live-link">WannaWatch.it</a></p>
+          </div>
+        </div>         
       </div>
+      
+      <div class="work-tile col-4">
+        <img src="img/pni.png">
+          <!--<p class="more">View More</p>-->
+        <hr>
+        <p>E-commerce photo editing platform serving multiple international retailers</p>
+        <div class="work-content">
+          <h2>PNI Media</h2>
+          <h3>Front End Development for International Retailers</h3>
+          <hr>
+          <div class="work-text">
+            <img src="img/sams-work.png">
+            <p>I maintain and create front end user experiences for many international retailer sites who use our photo editing software.  I work in an agile environment with many different teams and deadlines.  I use HTML, SASS, CSS, and JavaScript; sometimes modifying legacy code on older sites, and sometimes starting from scratch.<br>
+              <a href="https://businessprinting.samsclub.com/" target="_blank" class="live-link">Sam's Club Business Printing</a><br>
+              <a href="http://design.staples.com/" target="_blank" class="live-link">Staples</a><br>
+              <a href="http://design.quill.com/" target="_blank" class="live-link">Quill</a><br>
+              <a href="http://www.pnimedia.com/" target="_blank" class="live-link">PNI Media custom Squarespace</a>
+            </p>
+          </div>
+          <div class="work-text">
+            <img src="img/retailers.jpg">
+          </div>
+        </div>         
+      </div>
+
+      
+      <div class="work-tile col-4">
+        <img src="img/second-stage.png"> 
+          <!--<p class="more">View More</p>-->
+        <hr> 
+        <p>Corporate event planning business from Vancouver BC </p>              
+        <div class="work-content">
+          <h2>Second Stage</h2>
+          <h3>Freelance website design and development for a Vancouver event planning business</h3>
+          <hr>
+          <div class="work-text">
+            <img src="img/sstg-work.png">
+            <p>This is a simple website for a local business I had the opportunity to fully design and code using Bootstrap.<br><a href="http://www.secondstage.com" target="_blank" class="live-link">secondstage.com</a></p>
+          </div>
+        </div>         
+      </div>
+
    </div>
    <hr>
 
  <div class="row contact-links">
+  <h2>See Also:</h2>
+  <a href="http://codepen.io/wkaspryk/" target="_blank"><img src="img/codepen.png"></a>
+  <a href="https://github.com/wkaspryk" target="_blank"><img src="img/github.png"></a>
   <a href="https://www.linkedin.com/in/wkaspryk" target="_blank"><img src="img/linkedin.png"></a>
   <a href="mailto:wkaspryk@gmail.com" target="_top" target="_blank"><img src="img/email.png"></a>
 </div>
 
-  </div>
+</div>
 
 <!-- lightboxes -->
 
@@ -134,6 +195,7 @@
 </body>
 </html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 if ($(window).width() >= 800){
 var $w = $(window).scroll(function(){
@@ -146,4 +208,10 @@ var $w = $(window).scroll(function(){
     };
   });
 }
+
+$('.work-tile').click(function(){
+  $('.work-tile').not(this).toggleClass('close');
+  $(this).show().toggleClass('active');
+});
+
 </script>
