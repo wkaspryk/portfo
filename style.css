@@ -93,6 +93,10 @@ h2 {
   font-family: 'Abril Fatface', cursive;
 }
 
+body .content > h2 {
+  margin-top: 2.8rem;
+}
+
 header h3 {
   color: #fff;
   font-size: 2.3vw;
@@ -409,7 +413,7 @@ hr {
 }
 
 .contact-links img {
-  width: 50px;
+  width: 65px;
 }
 
 /* Menu Effect */
@@ -430,11 +434,27 @@ hr {
   filter: grayscale(50%);
 }
 
+.work-tile > h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.work-tile > hr {
+  width: 20%;
+  transition: width .5s;
+}
+
+.work-tile.active > hr {
+  width: 60%;
+}
+
 .work-tile .work-content {
   height: 0;
   overflow: hidden;
   transition: all .5s;
   text-align: center;
+  opacity: 0;
+  transform: scale(0);
 }
 
 .work-tile.active img {
@@ -488,9 +508,11 @@ hr {
 }
 
 .active .work-content {
-  height: auto;
+  height: 555px;
   animation: expand .5s;
   padding: 0 40px 40px;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .work-tile.close {
