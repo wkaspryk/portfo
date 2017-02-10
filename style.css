@@ -51,6 +51,7 @@ header {
   background: url("img/header-back.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: bottom;
   padding-top: 15vh;
 }
 
@@ -195,7 +196,7 @@ hr {
 
 .work-container {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .work {
