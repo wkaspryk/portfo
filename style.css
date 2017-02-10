@@ -426,12 +426,30 @@ hr {
   transition: all .5s;
   animation: open .5s;
   position: relative;
+  cursor: pointer;
+}
+
+.work-tile:hover {
+  transform: scale(1.05);
+}
+
+.work-tile:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.work-tile.active:hover {
+  transform: scale(1);
+  cursor: default;
+}
+
+.work-tile.active:hover img {
+  transform: scale(1);
 }
 
 .work-tile > img {
   width: 300px;
   transition: all .4s;
-  cursor: pointer;
   filter: grayscale(50%);
 }
 
@@ -483,10 +501,6 @@ hr {
   opacity: 1;
 }
 
-.work-tile img:hover {
-  filter: grayscale(0%);
-}
-
 .work-tile.active {
   width: 100%;
   background: #fff;
@@ -524,8 +538,7 @@ hr {
 }
 
 .work-tile.active .work-retailers img {
-  width: 700px;
-  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 @keyframes expand {
