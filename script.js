@@ -6,7 +6,7 @@ window.onload = function(){
 			if(window.scrollY>0){
 				document.getElementById('header').style.transition='opacity, 1s, ease-out';
 				document.getElementById('header').style.height='155px';
-				document.getElementById('header').style.opacity='.0';
+				document.getElementById('header').style.opacity='.3';
 			}else{
 				document.getElementById('header').style.transition='opacity, 1s, ease-out';
 				document.getElementById('header').style.height='80vh';

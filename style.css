@@ -57,7 +57,10 @@ header {
 
 @media (max-device-width: 800px) {
   header {
-    height: 50vh;
+    height: 28vh;
+    background-position: top;
+    background-size: contain;
+    padding-top: 150px;
   }
 }
 
@@ -197,6 +200,7 @@ hr {
 .work-container {
   margin: 0;
   margin-bottom: 75px;
+  overflow: hidden;
 }
 
 .work {
@@ -326,7 +330,7 @@ hr {
 .work-text {
   display: flex;
   align-items: center;
-  width: 830px;;
+  max-width: 830px;;
   opacity: 0;
 }
 
@@ -334,6 +338,15 @@ hr {
   padding: 30px 0 30px 30px;
   text-align: left;
   margin-top: -5%;
+  width: 50%;
+}
+
+.work-text > div {
+  width: 50%;
+}
+
+.work-tile.active .work-text img {
+  width: 100%;
 }
 
 .work-example img:last-child {
@@ -477,7 +490,6 @@ hr {
 }
 
 .work-tile.active img {
-  animation: expand-img .5s;
   width: 400px;
   filter: grayscale(0%);
 }
@@ -511,7 +523,7 @@ hr {
 }
 
 .work-tile.active .work-content > h2 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .work-tile.active .more {
@@ -528,6 +540,15 @@ hr {
   padding: 0 40px 40px;
   opacity: 1;
   transform: scale(1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-device-width: 800px) {
+  .active .work-content {
+    height: 600px;
+  }
 }
 
 .work-tile.close {
