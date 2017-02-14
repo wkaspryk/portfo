@@ -265,8 +265,9 @@ hr {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   position: relative;
-  bottom: -16px;
   cursor: pointer;
+  text-decoration: underline;
+  padding-bottom: 6px;
 }
 
 .less {
@@ -277,20 +278,12 @@ hr {
 }
 
 @media (max-device-width: 800px) {
-  .work .more {
-    opacity: 1;
-    top: 190px;
-    font-size: 1rem;
-  }
   .work-container {
     padding-bottom: 50px;
   }
 }
 
 @media (max-device-width: 375px) {
-  .work .more {
-    top: 190px;
-  }
   .work p {
     padding-bottom: 40px;
   }
@@ -376,6 +369,22 @@ hr {
   width: 50%;
 }
 
+@media (max-device-width: 800px) {
+  .work-text {
+    flex-direction: column;
+  }
+  .work-text p {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .work-text a {
+    font-size: 2rem;
+  }
+  .work-text > div {
+    padding-bottom: 10px;
+  }
+}
+
 .work-tile.active .work-text img {
   width: 100%;
 }
@@ -438,6 +447,7 @@ hr {
   .skill img {
     opacity: .7;
     bottom: 0;
+    width: 15%;
   }
 }
 
@@ -471,7 +481,7 @@ hr {
 }
 
 .contact-links img {
-  width: 65px;
+  width: 60px;
 }
 
 /* Menu Effect */
@@ -586,6 +596,7 @@ hr {
 .work-tile.active {
   width: 100%;
   background: #fff;
+  padding-bottom: 0;
 }
 
 .work-tile.active > p:last-of-type {
@@ -597,7 +608,7 @@ hr {
 }
 
 .work-tile.active .more {
-  opacity: 0;
+  display: none;
 }
 
 .work-tile.active .work-text{
@@ -605,7 +616,7 @@ hr {
 }
 
 .active .work-content {
-  height: 555px;
+  min-height: 555px;
   -webkit-animation: expand .5s;
           animation: expand .5s;
   padding: 0 40px 40px;
@@ -624,7 +635,7 @@ hr {
 
 @media (max-device-width: 800px) {
   .active .work-content {
-    height: 600px;
+    height: auto;
   }
 }
 
@@ -637,7 +648,10 @@ hr {
 }
 
 .work-tile.active .work-retailers img {
-  margin-bottom: 20px;
+  width: 80%;
+  filter: grayscale(15%);
+  position: relative;
+  top: -12px;
 }
 
 @-webkit-keyframes expand {
