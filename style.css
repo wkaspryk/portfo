@@ -57,7 +57,7 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  background: #222222;
+  background-color: #222222;
 }
 
 header {
@@ -86,6 +86,10 @@ header {
     background-size: contain;
     padding-top: 150px;
   }
+}
+
+#header {
+  transition: opacity 1s ease-out, height 1s ease-out;
 }
 
 video {
@@ -181,14 +185,25 @@ hr {
 
 .intro h3 {
   font-size: 1.3rem;
-  border-bottom: 1px solid #c9c9c9;
-  padding: 2rem 0 3rem;
+  width: 60%;
   text-align: center;
-  width: 70%;
+  margin-bottom: 4%;
+}
+
+.intro img {
+  height: 135px;
+  margin: 0 auto;
+}
+
+.intro hr {
+  margin-bottom: 0;
 }
 
 .title {
   margin-bottom: 0;
+  margin-top: 1%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
@@ -441,6 +456,12 @@ hr {
   opacity: .01;
   position: relative;
   bottom: -100px;
+  transition: all 1s ease-out;
+}
+
+.skill img.in-view {
+  opacity: .7;
+  bottom: 0;
 }
 
 @media (max-device-width: 800px) {
@@ -654,6 +675,7 @@ hr {
   top: -12px;
 }
 
+
 @-webkit-keyframes expand {
   0% {
     height: 0px;
@@ -740,9 +762,6 @@ hr {
   0% {
     opacity:0
   }
-  80% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -752,11 +771,70 @@ hr {
   0% {
     opacity:0
   }
-  80% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
 }
 
+@keyframes popup-open {
+  0% {
+    top: -5vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
+@keyframes height-open {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 40vh;
+  }
+}
+
+
+.sticky {
+  height: 50px;
+  background-color: rgba(247, 247, 247, .8);
+  border-bottom: 1px solid #c9c9c9;
+  opacity: 0;
+  position: fixed;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  transition: all .5s ease-in;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sticky.active {
+  top: 0;
+  opacity: 1;
+  z-index: 5;
+}
+
+.sticky a {
+  text-decoration: none;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.sticky a h2 {
+  font-size: 1.3rem;
+}
+
+.sticky a:hover h2 {
+  color: #808080;
+}
+
+.sticky a img {
+  width: 50px;
+}
+
+.sticky a:first-child {
+  position: absolute;
+  left: 20px;
+}

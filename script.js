@@ -4,16 +4,36 @@ window.onload = function(){
 
 		if(screen.width >= 800) {
 			if(window.scrollY>0){
-				document.getElementById('header').style.transition='opacity, 1s, ease-out';
 				document.getElementById('header').style.height='155px';
 				document.getElementById('header').style.opacity='.3';
 			}else{
-				document.getElementById('header').style.transition='opacity, 1s, ease-out';
 				document.getElementById('header').style.height='80vh';
 				document.getElementById('header').style.opacity='1';
 			}
 		}
-	}	
+            if(window.pageYOffset>50) {
+                $(".sticky").addClass("active");
+            }
+            else {
+                $(".sticky").removeClass("active");
+            }
+	}
+
+//smooth scrolling
+	$(document).ready(function(){
+		$('.sticky a').on('click', function(ev) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top - 50
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+	
 }
 
 var $animation_elements = $('.img');
@@ -34,8 +54,8 @@ function check_if_in_view() {
 		if ((element_bottom_position >= window_top_position) &&
 			(element_top_position <= window_bottom_position)) {
 			$element.addClass('in-view');
-		} else {
-			$element.removeClass('in-view');
-		}
+		} 
 	});
 }
+$window.on('scroll', check_if_in_view);
+

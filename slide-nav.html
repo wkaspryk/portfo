@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="slide-nav.css">
+</head>
+
+<body class="styleguide-body">
+	<div class="container">
+		<div class="menu" id="logo">
+			<h2>Logo.</h2>
+		</div>
+		<div class="menu" id="colour">
+			<h2>Color.</h2>
+		</div>
+		<div class="menu" id="buttons">
+			<h2>Controls.</h2>
+		</div>
+		<div class="menu" id="typography">
+			<h2>Typography.</h2>
+		</div>
+		<div class="menu" id="iconography">
+			<h2>Iconography.</h2>
+		</div>
+		<div class="menu" id="photography">
+			<h2>Imagery.</h2>
+		</div>
+		<div class="menu" id="layout">
+			<h2>Layout.</h2>
+		</div>
+	</div>
+	<div class="scrolldown">
+		<div class="circle"></div>
+		<a class="arrow"></a>
+	</div>
+	<div class="logo main" id="section-logo">
+	</div>
+
+	<div class="buttons main" id="section-buttons">
+	</div>
+
+	<div class="colour main" id="section-colour">
+	</div>
+
+	<div class="typography main" id="section-typography">
+	</div>
+
+	<div class="iconography main" id="section-iconography">
+	</div>
+
+	<div class="photography main" id="section-photography">
+	</div>
+
+	<div class="layout main" id="section-layout">
+	</div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scrollParallax.js"></script>
+
+    <script>
+$(document).ready(function() {
+
+		// Init AOS
+    AOS.init();
+
+	$('.menu').click(function() {
+		$(this).toggleClass('active');
+    $('.styleguide-body').css('overflow', 'visible');
+		$('.menu').not(this).toggleClass('non-active');
+		$('.fixed-menu').toggleClass('display');
+		$('.scrolldown').toggleClass('scrolldisplay');
+	  });
+
+
+	$('.menu:after').click(function() {
+		$('.menu').removeClass('active, non-active');
+		$('.main').removeClass('display');
+		$('.fixed-menu').toggleClass('display');
+		$('.scrolldown').toggleClass('scrolldisplay');
+	  });
+
+
+	$('#buttons').click(function () {
+		$('#section-buttons').toggleClass('display');
+		AOS.refresh();
+	});
+
+	$('#logo-menu, #logo').click(function() {
+		$('.main').removeClass('display');
+		$('.logo').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#logo').toggleClass('active');
+		$('.menu').not('#logo').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#colour-menu, #colour').click(function() {
+		$('.main').removeClass('display');
+		$('.colour').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#colour').toggleClass('active');
+		$('.menu').not('#colour').toggleClass('non-active');
+
+		// ===== Reset color circle when switching back from other sections =====
+		$( '.c1, .c2, .c3 , .c4' ).removeClass('color-hide');
+		$( '.c1, .c2, .c3 , .c4' ).removeClass('color-show');
+		$( '.color' ).css("transition-delay", "1s");	
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#buttons-menu, #buttons').click(function() {
+		$('.main').removeClass('display');
+		$('.buttons').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#buttons').toggleClass('active');
+		$('.menu').not('#buttons').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#typography-menu, #typography').click(function() {
+		$('.main').removeClass('display');
+		$('.typography').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#typography').toggleClass('active');
+		$('.menu').not('#typography').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#iconography-menu, #iconography').click(function() {
+		$('.main').removeClass('display');
+		$('.iconography').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#iconography').toggleClass('active');
+		$('.menu').not('#iconography').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#photography-menu, #photography').click(function() {
+		$('.main').removeClass('display');
+		$('.photography').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#photography').toggleClass('active');
+		$('.menu').not('#photography').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	$('#layout-menu, #layout').click(function() {
+		$('.main').removeClass('display');
+		$('.layout').toggleClass('display');
+		$('.menu').removeClass('active non-active');
+		$('#layout').toggleClass('active');
+		$('.menu').not('#layout').toggleClass('non-active');
+		if ($('.main').hasClass("display")) {
+			AOS.init();
+		}
+	  });
+
+	var wheight = $(window).height();
+	$('.scrolldown').click(function() {
+		$('html, body').animate({
+	      scrollTop: wheight
+	  	}, 500);	
+	});
+	
+	$(window).scroll(function(){
+  		if($(window).scrollTop() > $(document).height()*0.12){
+    		$('li').css({'color': '#d6d6d6'})
+  	}else{
+  		$('li').css({'color': '#fff'})
+  		}
+	});
+
+  });
+    </script>
+
+ </body>
+
+</html>
