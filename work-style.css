@@ -1,8 +1,4 @@
 
-.work-links {
-    min-height: 1000px;
-}
-
 .sticky {
   top: 0;
   opacity: 1;
@@ -148,6 +144,10 @@
     background-image: url('img/wwit-thumb.png');
 }
 
+.work-links ul li.work-animation .sams-bg {
+    background-image: url('img/sams-thumb.png');
+}
+
 .hide {
     display: none !important;
 }
@@ -157,6 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid #888;
 }
 
 .live-site-link a {
@@ -696,6 +697,8 @@ section.active:after {
   text-align: center;
   opacity: 0.2;
   transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: sans-serif;
 }
 .styleguide-body .menu:hover h2 {
   color: #fff;

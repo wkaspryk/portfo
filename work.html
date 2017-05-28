@@ -38,13 +38,6 @@
                 </div>
             </li>
             <li class="work-animation">
-                <div class="work-bg hover-design-bg"></div>
-                <div class="hover-design work-info popup-work">
-                <h2>Hover Overlay</h2>
-                <p>A cute way to say somethin'</p>
-                </div>
-            </li>
-            <li class="work-animation">
                 <div class="work-bg slide-nav-bg"></div>
                 <div class="slide-nav work-info popup-work">
                 <h2>Sliding Navigation</h2>
@@ -56,6 +49,20 @@
                 <div class="wwit-popup work-info popup-work">
                 <h2>WannaWatch.it</h2>
                 <p>What you wanna watch?!</p>
+                </div>
+            </li>
+            <li class="work-animation">
+                <div class="sams-bg work-bg"></div>
+                <div class="sams-popup work-info popup-work">
+                <h2>Sams Club Business Printing</h2>
+                <p>Front end development for Sam's Club business printing</p>
+                </div>
+            </li>
+            <li class="work-animation">
+                <div class="work-bg hover-design-bg"></div>
+                <div class="hover-design work-info popup-work">
+                <h2>Hover Overlay</h2>
+                <p>A cute way to say somethin'</p>
                 </div>
             </li>
         </ul>
@@ -158,6 +165,14 @@
         </div>
         <!-- end wwitpage -->
 
+        <!-- start wwit page -->
+        <div class="sams hide">
+            <div class="live-site-link">
+                <a href="https://businessprinting.samsclub.com" target="_blank" alt="Sam's Club'">View Live</a>
+            </div>
+            <img src="img/sams-fullpage.png" style="width:100%;">
+        </div>
+        <!-- end wwitpage -->
 
         <!-- start slider layout -->
         <div class="styleguide-body hide">
@@ -224,7 +239,7 @@
 
     $('.popup-work').click(function () {
         $('body').toggleClass('popup-open');
-        $('.hover-body, .styleguide-body, .pg-two, .wwit').addClass('hide');
+        $('.hover-body, .styleguide-body, .pg-two, .wwit, .sams').addClass('hide');
     });
 
     $('.hover-design').click(function () {
@@ -243,6 +258,9 @@
         $('.wwit').removeClass('hide');
     });
 
+    $('.sams-popup').click(function () {
+        $('.sams').removeClass('hide');
+    });
 
 // start navigation layout js
     $(document).ready(function () {
