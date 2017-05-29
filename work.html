@@ -65,6 +65,13 @@
                 <p>A cute way to say somethin'</p>
                 </div>
             </li>
+            <li class="work-animation">
+                <div class="work-bg wwit-app-bg"></div>
+                <div class="wwit-app-popup work-info popup-work">
+                <h2>Prototype for movie app</h2>
+                <p>Invision interactive prototype</p>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -166,6 +173,12 @@
         <!-- end wwitpage -->
 
         <!-- start wwit page -->
+        <div class="wwit-app hide">
+            <iframe width="396" height="858" src="//invis.io/AG10LM4UV" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- end wwitpage -->
+
+        <!-- start wwit page -->
         <div class="sams hide">
             <div class="live-site-link">
                 <a href="https://businessprinting.samsclub.com" target="_blank" alt="Sam's Club'">View Live</a>
@@ -239,7 +252,7 @@
 
     $('.popup-work').click(function () {
         $('body').toggleClass('popup-open');
-        $('.hover-body, .styleguide-body, .pg-two, .wwit, .sams').addClass('hide');
+        $('.hover-body, .styleguide-body, .pg-two, .wwit, .sams, .wwit-app').addClass('hide');
     });
 
     $('.hover-design').click(function () {
@@ -260,6 +273,10 @@
 
     $('.sams-popup').click(function () {
         $('.sams').removeClass('hide');
+    });
+
+    $('.wwit-app-popup').click(function () {
+        $('.wwit-app').removeClass('hide');
     });
 
 // start navigation layout js

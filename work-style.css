@@ -15,13 +15,13 @@
 
 .work-links ul li {
   list-style: none;
-  width: 48%;
+  width: 47%;
   flex-grow: 1;
   min-height: 40vh;
   background: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin: 15px;
   cursor: pointer;
   animation: fade-in 2s;
 }
@@ -125,6 +125,7 @@
     flex-direction: column;
     justify-content: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .work-links ul li.work-animation:hover .work-info {
@@ -146,6 +147,15 @@
 
 .work-links ul li.work-animation .sams-bg {
     background-image: url('img/sams-thumb.png');
+}
+
+.work-links ul li.work-animation .wwit-app-bg {
+    background-image: url('img/wwit-app.png');
+    background-position: top;
+}
+
+.popup .wwit-app {
+    text-align: center;
 }
 
 .hide {

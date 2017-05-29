@@ -191,7 +191,7 @@ hr {
 }
 
 .intro img {
-  height: 135px;
+  height: 115px;
   margin: 0 auto;
 }
 
@@ -657,6 +657,9 @@ hr {
 @media (max-device-width: 800px) {
   .active .work-content {
     height: auto;
+  }
+  .sticky {
+    display: none !important;
   }
 }
 
