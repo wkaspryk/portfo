@@ -56,13 +56,14 @@
   border: 5px solid #f7f7f7;
   transition: all .5s;
   overflow: scroll;
+  overflow-x: hidden;
   display: none;
 }
 
 .popup .popup-work {
   position: fixed;
   right: 35px;
-  top: 35px;
+  top: 5vh;
 }
 
 .popup .popup-work:before, .popup .popup-work:after {
@@ -858,7 +859,7 @@ section.active:after {
 }
 
 .styleguide-body .main {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 93%;
   background: #fff;
   display: none;
