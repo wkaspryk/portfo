@@ -10,3 +10,5 @@
     color: #fff; }
   .work-two .testing {
     display: flex; }
+    .work-two .testing .nested-test {
+      display: block; }

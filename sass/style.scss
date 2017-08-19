@@ -12,5 +12,8 @@
   }
   .testing {
     display: flex;
+    .nested-test {
+      display: block;
+    }
   }
 }
