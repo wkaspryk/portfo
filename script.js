@@ -11,7 +11,7 @@ window.onload = function(){
 				document.getElementById('header').style.opacity='1';
 			}
 		}
-            if(window.pageYOffset>50) {
+            if(window.pageYOffset>0) {
                 $(".sticky").addClass("active");
             }
             else {

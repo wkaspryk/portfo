@@ -22,7 +22,18 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./css/'));
 });
 
+gulp.task('sass', function() {
+  gulp.src('sass/**/*.scss')
+  .pipe(sass({style: 'expanded'}))
+    .on('error', sass.logError)
+  .pipe(gulp.dest('./css/'))
+});
+
 //Watch task
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss',['styles']);
+});
+
+gulp.task('watch', function() {
+  gulp.watch('sass/**/*.scss',['styles']);
 });

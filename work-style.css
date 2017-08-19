@@ -11,6 +11,7 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  margin: .5% 0 4.5%;
 }
 
 .work-links ul li {
@@ -117,7 +118,7 @@
     position: absolute;
     display: flex;
     top: 40vh;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .85);
     height: 100%;
     width: 100%;
     z-index: 3;
@@ -127,6 +128,10 @@
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
+}
+
+.work-links ul li .work-info h2 {
+    font-size: 1.7rem;
 }
 
 .work-links ul li.work-animation:hover .work-info {
@@ -143,11 +148,11 @@
 }
 
 .work-links ul li.work-animation .wwit-bg {
-    background-image: url('img/wwit-thumb.png');
+    background-image: url('img/wwit-thumb.jpg');
 }
 
 .work-links ul li.work-animation .sams-bg {
-    background-image: url('img/sams-thumb.png');
+    background-image: url('img/sams-thumb.jpg');
 }
 
 .work-links ul li.work-animation .wwit-app-bg {
@@ -184,10 +189,6 @@
 .live-site-link a:hover {
     background: #888;
     border-bottom: 3px solid #ccc;
-}
-
-.wwit .live-site-link {
-    background: rgba(21, 175, 139, 0.37);
 }
 
 /*start nav layout*/
@@ -312,7 +313,6 @@ section.active:after {
 	  opacity: 1;
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
-    background-image: url(../img/arrow.png);
     background-size: 18px;
     background-repeat: no-repeat;
     background-position-x: 19px;

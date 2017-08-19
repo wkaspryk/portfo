@@ -1,13 +1,10 @@
 /* Menu Effect */
-
 .work-two {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  img {
+  flex-direction: column; }
+  .work-two img {
     width: 100px;
     border: 1px solid red;
-    color: #fff;
-  }
-}
+    color: #fff; }
