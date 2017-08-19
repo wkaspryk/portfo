@@ -14,9 +14,6 @@
     display: flex;
     .nested-test {
       display: block;
-      .merge-test {
-        opacity: 0;
-      }
     }
   }
 }
