@@ -31,17 +31,24 @@
         </div>
         <ul>
             <li class="work-animation">
-                <div class="work-bg"></div>
-                <div class="nav-layout work-info popup-work">
-                <h2>Navigation Layout</h2>
-                <p>A layout for navigation using flexbox</p>
+                <div class="staples-bg work-bg"></div>
+                <div class="staples-popup work-info popup-work">
+                <h2>Staples</h2>
+                <p>Front end development for Staples business printing</p>
+                </div>
+            </li>            
+            <li class="work-animation">
+                <div class="sams-bg work-bg"></div>
+                <div class="sams-popup work-info popup-work">
+                <h2>Sams Club</h2>
+                <p>Front end development for Sam's Club business printing</p>
                 </div>
             </li>
             <li class="work-animation">
-                <div class="work-bg slide-nav-bg"></div>
-                <div class="slide-nav work-info popup-work">
-                <h2>Sliding Navigation</h2>
-                <p>Website template</p>
+                <div class="costco-bg work-bg"></div>
+                <div class="costco-popup work-info popup-work">
+                <h2>Costco</h2>
+                <p>Front end development for Costco business printing</p>
                 </div>
             </li>
             <li class="work-animation">
@@ -52,19 +59,26 @@
                 </div>
             </li>
             <li class="work-animation">
-                <div class="sams-bg work-bg"></div>
-                <div class="sams-popup work-info popup-work">
-                <h2>Sams Club Business Printing</h2>
-                <p>Front end development for Sam's Club business printing</p>
+                <div class="work-bg slide-nav-bg"></div>
+                <div class="slide-nav work-info popup-work">
+                <h2>Sliding Navigation</h2>
+                <p>Website template</p>
+                </div>
+            </li>            
+            <li class="work-animation">
+                <div class="work-bg"></div>
+                <div class="nav-layout work-info popup-work">
+                <h2>Navigation Layout</h2>
+                <p>A layout for navigation using flexbox</p>
                 </div>
             </li>
-            <li class="work-animation">
+            <!-- <li class="work-animation">
                 <div class="work-bg hover-design-bg"></div>
                 <div class="hover-design work-info popup-work">
                 <h2>Hover Overlay</h2>
                 <p>A cute way to say somethin'</p>
                 </div>
-            </li>
+            </li> -->
             <li class="work-animation">
                 <div class="work-bg wwit-app-bg"></div>
                 <div class="wwit-app-popup work-info popup-work">
@@ -188,9 +202,27 @@
         <!-- start wwit page -->
         <div class="sams hide">
             <div class="live-site-link">
-                <a href="https://businessprinting.samsclub.com" target="_blank" alt="Sam's Club'">View Live</a>
+                <a href="https://businessprinting.samsclub.com" target="_blank" alt="Sam's Club">View Live</a>
             </div>
             <img src="img/sams-fullpage.jpg" style="width:100%;">
+        </div>
+        <!-- end wwitpage -->
+
+        <!-- start costco page -->
+        <div class="costco hide">
+            <div class="live-site-link">
+                <a href="https://www.costcobusinessprinting.com/" target="_blank" alt="Costco">View Live</a>
+            </div>
+            <img src="img/costco-fullpage.jpg" style="width:100%;">
+        </div>
+        <!-- end wwitpage -->
+
+        <!-- start staples page -->
+        <div class="staples hide">
+            <div class="live-site-link">
+                <a href="https://design.staples.com/banners" target="_blank" alt="Costco">View Live</a>
+            </div>
+            <img src="img/staples-fullpage.jpg" style="width:100%;">
         </div>
         <!-- end wwitpage -->
 
@@ -259,7 +291,8 @@
 
     $('.popup-work').click(function () {
         $('body').toggleClass('popup-open');
-        $('.hover-body, .styleguide-body, .pg-two, .wwit, .sams, .wwit-app').addClass('hide');
+        $('.popup').children().addClass('hide');
+        $('.popup-work').removeClass('hide');
     });
 
     $('.hover-design').click(function () {
@@ -280,6 +313,14 @@
 
     $('.sams-popup').click(function () {
         $('.sams').removeClass('hide');
+    });
+
+    $('.costco-popup').click(function () {
+        $('.costco').removeClass('hide');
+    });
+
+    $('.staples-popup').click(function () {
+        $('.staples').removeClass('hide');
     });
 
     $('.wwit-app-popup').click(function () {
