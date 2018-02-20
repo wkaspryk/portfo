@@ -60,6 +60,10 @@ body {
   background-color: #222222;
 }
 
+body.popup-open {
+  overflow: hidden;
+}
+
 header {
   height: 80vh;
   display: -webkit-box;
@@ -72,7 +76,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("img/header-back.jpg") no-repeat;
+  background: url("img/header-back1.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
@@ -187,12 +191,16 @@ hr {
   font-size: 1.3rem;
   width: 60%;
   text-align: center;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 .intro img {
   height: 115px;
   margin: 0 auto;
+}
+
+.intro .live-link {
+  margin-bottom: 2%;
 }
 
 .intro hr {
@@ -374,7 +382,7 @@ hr {
   width: 40%;
 }
 
-.work-text a {
+.live-link {
     background: #434343;
     color: #fff;
     padding: 10px 20px;
@@ -383,9 +391,11 @@ hr {
     margin: 5px;
     float: left;
     display: inline-block;
+    transition: .35s;
+    border-radius: 3px;
 }
 
-.work-text a:hover {
+.live-link:hover {
     background: #5f5f5f;
 }
 

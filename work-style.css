@@ -188,21 +188,6 @@
     border-bottom: 2px solid #888;
 }
 
-.live-site-link a {
-    text-decoration: none;
-    background: #333;
-    padding: 10px;
-    color: #fff;
-    height: 23px;
-    border-bottom: 3px solid #888;
-    transition: all .5s;;
-}
-
-.live-site-link a:hover {
-    background: #888;
-    border-bottom: 3px solid #ccc;
-}
-
 /*start nav layout*/
  .pg-two {
  	animation: slide-left .5s;
