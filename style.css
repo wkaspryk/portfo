@@ -76,7 +76,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("img/header-back1.jpg") no-repeat;
+  background-image: url("header-imgs/1.jpg");
+  background: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;

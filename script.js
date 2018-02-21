@@ -57,3 +57,21 @@ function check_if_in_view() {
 }
 $window.on('scroll', check_if_in_view);
 
+//dynamic header background image
+function randomImage(){
+	var images = [
+		'header-imgs/0.jpg',
+		'header-imgs/1.jpg',
+		'header-imgs/2.jpg',
+		'header-imgs/3.jpg',
+		'header-imgs/4.jpg',
+		'header-imgs/5.jpg'];
+	var size = images.length;
+	var x = Math.floor(size * Math.random());
+	console.log(x);
+	var element = document.getElementById('header');
+	console.log(element);
+	element.style["background-image"] = "url("+ "header-imgs/" + [x] + ".jpg)";
+  }
+  
+  document.addEventListener("DOMContentLoaded", randomImage);
