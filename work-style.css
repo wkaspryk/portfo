@@ -49,7 +49,7 @@
   }
 }
 
-.popup-work {
+#popup-work {
   display: flex;
   cursor: pointer;
   position: absolute;
@@ -83,13 +83,21 @@
   display: none;
 }
 
-.popup .popup-work {
+.popup > div {
+  display: none;
+}
+
+.popup div.popup-active {
+  display: block;
+}
+
+.popup #popup-work {
   position: fixed;
   right: 35px;
   top: 5vh;
 }
 
-.popup .popup-work:before, .popup .popup-work:after {
+.popup #popup-work:before, .popup #popup-work:after {
   content: '';
   height: 25px;
   width: 1px;
@@ -97,21 +105,17 @@
   position: absolute;
 }
 
-.popup .popup-work:before {
+.popup #popup-work:before {
   transform: rotate(-45deg);
 }
 
-.popup .popup-work:after {
+.popup #popup-work:after {
   transform: rotate(45deg);
 }
 
 .popup-open .popup {
   display: block;
   top: 5vh;
-  animation: popup-open .8s;
-}
-
-.popup-open .popup-work {
   animation: popup-open .8s;
 }
 
@@ -137,7 +141,7 @@
     transform: scale(1);
 }
 
-.work-links ul li.work-animation .work-info {
+.work-links ul li.work-animation #popup-work {
     position: absolute;
     display: flex;
     top: 0;
@@ -153,10 +157,14 @@
     cursor: pointer;
 }
 
-.work-links ul li .work-info h2 {
+.work-links ul li #popup-work h2 {
   font-size: 1.7rem;
   transition: all .3s;
   font-weight: 200;
+}
+
+.work-links ul li .pg-two h2 {
+  color: #585858;
 }
 
 .work-links ul li.work-animation:hover h2 {
@@ -885,7 +893,7 @@ section.active:after {
 }
 
 .styleguide-body .main {
-  min-height: 90vh;
+  min-height: 100vh;
   width: 93%;
   background: #fff;
   display: none;

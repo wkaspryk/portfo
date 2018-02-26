@@ -32,49 +32,49 @@
         <ul>
             <li class="work-animation">
                 <div class="staples-bg work-bg"></div>
-                <div class="staples-popup work-info popup-work">
+                <div id="popup-work" class="staples">
                 <img src="img/staples-logo.png">
                 <p>UI development for Staples business printing</p>
                 </div>
             </li>            
             <li class="work-animation">
                 <div class="sams-bg work-bg"></div>
-                <div class="sams-popup work-info popup-work">
+                <div id="popup-work" class="sams">
                 <img src="img/samsclublogo.png">
                 <p>UI development for Sam's Club business printing</p>
                 </div>
             </li>
             <li class="work-animation">
                 <div class="costco-bg work-bg"></div>
-                <div class="costco-popup work-info popup-work">
+                <div id="popup-work" class="costco">
                 <img src="img/costco-logo.png">   
                 <p>Front end development for Costco business printing</p>
                 </div>
             </li>
             <li class="work-animation">
                 <div class="wwit-bg work-bg"></div>
-                <div class="wwit-popup work-info popup-work">
+                <div id="popup-work" class="wwit">
                 <img src="img/wannawatch.png">
-                <p>What you wanna watch?!</p>
+                <p>Social movie sharing platform and ticket sales</p>
                 </div>
             </li>
             <li class="work-animation">
                 <div class="work-bg slide-nav-bg"></div>
-                <div class="slide-nav work-info popup-work">
+                <div id="popup-work" class="sliding-nav">
                 <h2>Sliding Navigation</h2>
                 <p>Website template</p>
                 </div>
             </li>            
             <li class="work-animation">
                 <div class="work-bg"></div>
-                <div class="nav-layout work-info popup-work">
+                <div id="popup-work" class="pg-two">
                 <h2>Navigation Layout</h2>
                 <p>A layout for navigation using flexbox</p>
                 </div>
             </li>
             <li class="work-animation">
                 <div class="work-bg wwit-app-bg"></div>
-                <div class="wwit-app-popup work-info popup-work">
+                <div id="popup-work" class="wwit-app">
                 <h2>Prototype for movie app</h2>
                 <p>Invision interactive prototype</p>
                 </div>
@@ -95,7 +95,7 @@
         <div class="popup-work"></div>
 
         <!--start nav layout-->
-        <div class="pg-two hide">
+        <div class="pg-two">
             <div class="container-pages">
                 <section id="logo-nav">
                     <h2>Logo.</h2>
@@ -155,7 +155,7 @@
         <!--end nav layout-->
 
         <!-- start hover page -->
-        <div class="hover-body hide">
+        <div class="hover-body">
             <div class="hover-container">
                 <div class="left">
                     <div class="red">
@@ -178,7 +178,7 @@
         <!--end hover page-->
 
         <!-- start wwit page -->
-        <div class="wwit hide">
+        <div class="wwit">
             <div class="live-site-link">
                 <a href="https://www.wannawatch.it" class="live-link" target="_blank" alt="WannaWatch.it">View Live</a>
             </div>
@@ -186,23 +186,23 @@
         </div>
         <!-- end wwitpage -->
 
-        <!-- start wwit page -->
-        <div class="wwit-app hide">
+        <!-- start wwit app page -->
+        <div class="wwit-app">
             <iframe width="396" height="858" src="//invis.io/AG10LM4UV" frameborder="0" allowfullscreen></iframe>
         </div>
-        <!-- end wwitpage -->
+        <!-- end wwit app page -->
 
-        <!-- start wwit page -->
-        <div class="sams hide">
+        <!-- start sams page -->
+        <div class="sams">
             <div class="live-site-link">
                 <a href="https://businessprinting.samsclub.com" class="live-link" target="_blank" alt="Sam's Club">View Live</a>
             </div>
             <img src="img/sams-fullpage.jpg" style="width:100%;">
         </div>
-        <!-- end wwitpage -->
+        <!-- end sams page -->
 
         <!-- start costco page -->
-        <div class="costco hide">
+        <div class="costco">
             <div class="live-site-link">
                 <a href="https://www.costcobusinessprinting.com/" class="live-link" target="_blank" alt="Costco">View Live</a>
             </div>
@@ -211,7 +211,7 @@
         <!-- end wwitpage -->
 
         <!-- start staples page -->
-        <div class="staples hide">
+        <div class="staples">
             <div class="live-site-link">
                 <a href="https://design.staples.com/banners" class="live-link" target="_blank" alt="Costco">View Live</a>
             </div>
@@ -220,55 +220,58 @@
         <!-- end wwitpage -->
 
         <!-- start slider layout -->
-        <div class="styleguide-body hide">
-            <div class="styleguide-container">
-                <div class="menu" id="logo">
-                    <h2>Logo.</h2>
+        <div class="sliding-nav">
+            <div class="styleguide-body">
+                <div class="styleguide-container">
+                    <div class="menu" id="logo">
+                        <h2>Logo.</h2>
+                    </div>
+                    <div class="menu" id="colour">
+                        <h2>Color.</h2>
+                    </div>
+                    <div class="menu" id="buttons">
+                        <h2>Controls.</h2>
+                    </div>
+                    <div class="menu" id="typography">
+                        <h2>Typography.</h2>
+                    </div>
+                    <div class="menu" id="iconography">
+                        <h2>Iconography.</h2>
+                    </div>
+                    <div class="menu" id="photography">
+                        <h2>Imagery.</h2>
+                    </div>
+                    <div class="menu" id="layout">
+                        <h2>Layout.</h2>
+                    </div>
                 </div>
-                <div class="menu" id="colour">
-                    <h2>Color.</h2>
+                <div class="scrolldown">
+                    <div class="circle"></div>
+                    <a class="arrow"></a>
                 </div>
-                <div class="menu" id="buttons">
-                    <h2>Controls.</h2>
+                <div class="logo main" id="section-logo">
                 </div>
-                <div class="menu" id="typography">
-                    <h2>Typography.</h2>
-                </div>
-                <div class="menu" id="iconography">
-                    <h2>Iconography.</h2>
-                </div>
-                <div class="menu" id="photography">
-                    <h2>Imagery.</h2>
-                </div>
-                <div class="menu" id="layout">
-                    <h2>Layout.</h2>
-                </div>
-            </div>
-            <div class="scrolldown">
-                <div class="circle"></div>
-                <a class="arrow"></a>
-            </div>
-            <div class="logo main" id="section-logo">
-            </div>
 
-            <div class="buttons main" id="section-buttons">
-            </div>
+                <div class="buttons main" id="section-buttons">
+                </div>
 
-            <div class="colour main" id="section-colour">
-            </div>
+                <div class="colour main" id="section-colour">
+                </div>
 
-            <div class="typography main" id="section-typography">
-            </div>
+                <div class="typography main" id="section-typography">
+                </div>
 
-            <div class="iconography main" id="section-iconography">
-            </div>
+                <div class="iconography main" id="section-iconography">
+                </div>
 
-            <div class="photography main" id="section-photography">
-            </div>
+                <div class="photography main" id="section-photography">
+                </div>
 
-            <div class="layout main" id="section-layout">
+                <div class="layout main" id="section-layout">
+                </div>
             </div>
         </div>
+
          <!-- end slider layout -->
 
         </div>
@@ -282,43 +285,19 @@
 
 <script>
 
-    $('.popup-work').click(function () {
-        $('body').toggleClass('popup-open');
-        $('.popup').children().addClass('hide');
-        $('.popup-work').removeClass('hide');
-    });
+// popup js
 
-    $('.hover-design').click(function () {
-        $('.hover-body').removeClass('hide');
-    });
+$('.work-animation').click(function () {
+    $('body').toggleClass('popup-open');
+    var clicked = $(this).find("#popup-work").attr("class");
+    var activePopup = $(".popup div" + "." + clicked);
+    $(".popup div").removeClass("popup-active");     
+    $(activePopup).toggleClass("popup-active");
+});
 
-    $('.slide-nav').click(function () {
-        $('.styleguide-body').removeClass('hide');
-    });
-
-    $('.nav-layout').click(function () {
-        $('.pg-two').removeClass('hide');
-    });
-
-    $('.wwit-popup').click(function () {
-        $('.wwit').removeClass('hide');
-    });
-
-    $('.sams-popup').click(function () {
-        $('.sams').removeClass('hide');
-    });
-
-    $('.costco-popup').click(function () {
-        $('.costco').removeClass('hide');
-    });
-
-    $('.staples-popup').click(function () {
-        $('.staples').removeClass('hide');
-    });
-
-    $('.wwit-app-popup').click(function () {
-        $('.wwit-app').removeClass('hide');
-    });
+$('.popup-bg').click(function () {
+    $('body').removeClass('popup-open');
+});
 
 // start navigation layout js
     $(document).ready(function () {
