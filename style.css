@@ -88,7 +88,7 @@ header {
   header {
     height: 28vh;
     background-position: top;
-    background-size: contain;
+    background-size: 100% 650px;
     padding-top: 150px;
   }
 }
